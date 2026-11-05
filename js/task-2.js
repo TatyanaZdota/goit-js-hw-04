@@ -1,13 +1,13 @@
-`use strict`;
+'use strict';
 function calcAverageCalories(days) {
   if (days.length === 0) {
     return 0;
   }
   let total = 0;
   for (const day of days) {
-    total += day.calories / days.length;
+    total += day.calories;
   }
-  return total;
+  return (total /= days.length);
 }
 
 console.log(
